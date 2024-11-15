@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_PASSWORD}
+      MARIADB_DATABASE: ${DB_DATABASE}
+    ports:
+      - ${DB_PORT}:${DB_PORT}
